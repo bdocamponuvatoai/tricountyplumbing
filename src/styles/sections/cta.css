@@ -1,0 +1,38 @@
+.cta {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--section-y);
+  background: var(--bg-dark);
+  color: var(--on-dark);
+  text-align: center;
+  isolation: isolate;
+  --focus: #fff;
+}
+
+.cta-inner {
+  max-width: 860px;
+}
+
+.cta .eyebrow {
+  color: var(--accent-on-dark);
+}
+
+.cta .lead {
+  max-width: 30em;
+  margin: 20px auto 0;
+  color: var(--on-dark-2);
+}
+
+.cta .button-row {
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.cta-pipes {
+  position: absolute;
+  right: -40px;
+  bottom: -20px;
+  z-index: -1;
+  width: min(560px, 60vw);
+  color: rgb(232 162 127 / 0.22);
+}

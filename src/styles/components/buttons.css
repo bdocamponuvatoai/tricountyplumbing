@@ -1,0 +1,148 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s var(--ease),
+    border-color 0.2s var(--ease),
+    color 0.2s var(--ease),
+    transform 0.2s var(--ease);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn svg {
+  flex: none;
+  width: 1.15em;
+  height: 1.15em;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-sm {
+  min-height: 34px;
+  padding: 0 16px;
+  font-size: 0.875rem;
+}
+
+.btn-md {
+  min-height: 46px;
+  padding: 0 22px;
+  font-size: 1rem;
+}
+
+.btn-lg {
+  min-height: 54px;
+  padding: 0 28px;
+  font-size: 1.0625rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--brand-hover);
+}
+
+.btn-secondary {
+  border-color: var(--line-strong);
+  color: var(--brand);
+}
+
+.btn-secondary:hover {
+  border-color: var(--brand);
+  background: rgb(22 52 59 / 0.05);
+}
+
+.btn-light {
+  background: #fff;
+  color: var(--brand);
+}
+
+.btn-light:hover {
+  background: rgb(255 255 255 / 0.86);
+}
+
+.btn-ghost-light {
+  border-color: rgb(255 255 255 / 0.42);
+  color: #fff;
+}
+
+.btn-ghost-light:hover {
+  border-color: #fff;
+  background: rgb(255 255 255 / 0.1);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.button-row-center {
+  justify-content: center;
+}
+
+/* Inline "Learn more ›" link */
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-underline-offset: 4px;
+}
+
+.link svg {
+  width: 1.05em;
+  height: 1.05em;
+  transition: transform 0.2s var(--ease);
+}
+
+.link:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.link:hover svg {
+  transform: translateX(3px);
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  margin-top: 28px;
+}
+
+@media (max-width: 480px) {
+  .button-row .btn {
+    width: 100%;
+  }
+}
+
+/* Very narrow screens: let long labels wrap rather than overflow. */
+@media (max-width: 360px) {
+  .btn {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
+  }
+}

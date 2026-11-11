@@ -1,0 +1,53 @@
+/* Large statement typography */
+
+.statement {
+  text-align: center;
+}
+
+.statement-text {
+  max-width: 22em;
+  margin-inline: auto;
+  font-size: clamp(1.875rem, 1.2rem + 2.6vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: -0.038em;
+  text-wrap: balance;
+}
+
+/* Values */
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: clamp(56px, 7vw, 96px);
+}
+
+.values li {
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.values h3 {
+  margin-top: 40px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.values p {
+  margin-top: 8px;
+  color: var(--text-2);
+}
+
+@media (max-width: 834px) {
+  .values {
+    grid-template-columns: 1fr;
+  }
+
+  .values h3 {
+    margin-top: 20px;
+  }
+}

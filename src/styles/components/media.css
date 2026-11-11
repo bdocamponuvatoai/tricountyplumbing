@@ -1,0 +1,59 @@
+.photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: #e9e7e2;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Visible on every photo of (fictional) people. */
+.photo-label {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgb(16 39 45 / 0.62);
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.wide-photo {
+  aspect-ratio: 2 / 1;
+}
+
+.icon-badge {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.icon-badge svg {
+  width: 22px;
+  height: 22px;
+}
+
+.icon-badge-lg {
+  width: 52px;
+  height: 52px;
+}
+
+@media (max-width: 734px) {
+  .wide-photo {
+    aspect-ratio: 4 / 3;
+  }
+}

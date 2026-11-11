@@ -1,0 +1,44 @@
+/* Privacy */
+
+.privacy {
+  max-width: calc(720px + var(--gutter) * 2);
+  padding-bottom: var(--section-y);
+}
+
+.privacy h2 {
+  margin: 40px 0 10px;
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.privacy h2:first-child {
+  margin-top: 0;
+}
+
+.privacy p + p {
+  margin-top: 1em;
+}
+
+.privacy a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.privacy .muted {
+  margin-top: 48px;
+  font-size: var(--fs-small);
+}
+
+/* 404 */
+
+.not-found {
+  padding-block: clamp(96px, 14vw, 180px);
+  text-align: center;
+}
+
+.not-found .lead {
+  margin-top: 20px;
+}

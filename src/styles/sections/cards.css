@@ -1,0 +1,109 @@
+/* Guide cards */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.card .photo {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+}
+
+.card .photo img {
+  transition: transform 0.9s var(--ease-out);
+}
+
+.card:hover .photo img {
+  transform: scale(1.04);
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-top: 20px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+}
+
+.card-meta span:first-child {
+  color: var(--accent);
+}
+
+.card-meta span:last-child {
+  color: var(--text-2);
+}
+
+.card-title {
+  margin-top: 8px;
+  font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.card:hover .card-title {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+}
+
+.card-text {
+  margin-top: 8px;
+  color: var(--text-2);
+  font-size: var(--fs-small);
+}
+
+.section-alt .cards {
+  margin-top: 48px;
+}
+
+.guides-grid {
+  padding-bottom: 8px;
+}
+
+@media (max-width: 1068px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 734px) {
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Swipeable row on phones */
+  .cards-carousel {
+    grid-template-columns: none;
+    grid-auto-columns: 82%;
+    grid-auto-flow: column;
+    gap: 14px;
+    margin-inline: calc(var(--gutter) * -1);
+    padding-inline: var(--gutter);
+    overflow-x: auto;
+    scroll-padding-inline: var(--gutter);
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+  }
+
+  .cards-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cards-carousel > li {
+    scroll-snap-align: start;
+  }
+}

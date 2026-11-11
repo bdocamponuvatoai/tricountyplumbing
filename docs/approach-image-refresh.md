@@ -1,0 +1,13 @@
+# Homeowner conversation photography
+
+## November 11, 2026 — homeowner conversation refresh
+
+Generated and edited with the built-in image generation tool. Both adults are fictional models, not Ronald Harang or an actual customer. These assets replace only the photograph in the homepage’s “A home is personal” section. Other pages retain their existing photography.
+
+### src/assets/images/conversation.webp (originally approach-conversation.webp)
+
+Use case: photorealistic-natural. Asset type: premium residential plumbing website about-section photo. Produce ONE square 1:1 editorial photograph, photograph only, no webpage or graphic design. A candid, believable conversation in a bright Northern California family kitchen: a fictional male plumbing professional in his early forties, wearing a clean navy blue work shirt and tan trousers, is calmly explaining a faucet option to a fictional female homeowner in her early forties wearing a relaxed ivory linen shirt. They stand side by side at a pale stone kitchen counter, angled slightly toward each other, looking at the faucet with engaged, natural expressions and subtle warmth, NOT posing for the camera. Both people are equally important, heads and upper bodies fully visible and kept within the central 70 percent of the frame so the photo tolerates modest crops. A real brushed nickel gooseneck faucet and sink in the lower foreground clearly ground the scene in residential plumbing. One small closed navy canvas tool bag on a protective folded cloth. All cabinetry closed; no exposed plumbing or tools being used incorrectly. Modern yet attainable home: warm off-white walls, light natural oak cabinetry, soft window light, a small leafy plant, no distracting decor. Composition: medium-wide waist-up view, camera at counter height, faces in the upper middle third, hands anatomically correct and relaxed above the counter, room to breathe around both heads. Restrained ivory, stone, pale oak, deep navy, gentle sage from foliage. Real full-frame 50mm architectural lifestyle photography, natural pores and fabric, fine grain, honest daylight, soft contrast, no orange color cast, no glossy AI skin. Avoid handshakes, thumbs-up, toothy advertising grins, fake badges, dramatic lighting, CGI, over-styled luxury mansion. No text, no watermark, no logo. These are invented models in an illustrative service scene, not actual business staff or customers.
+
+### src/assets/images/conversation-portrait.webp (originally approach-conversation-mobile.webp)
+
+The prompt for this portrait version was not recorded by the original tool. It is a 1122 × 1402 portrait version of the same fictional scene.

@@ -1,0 +1,62 @@
+/* Floating quick-contact bar for phones. */
+.action-bar {
+  display: none;
+}
+
+@media (max-width: 734px) {
+  .action-bar {
+    position: fixed;
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    left: 12px;
+    z-index: 40;
+    display: flex;
+    gap: 8px;
+    padding: 6px;
+    border: 1px solid rgb(255 255 255 / 0.6);
+    border-radius: 999px;
+    background: rgb(255 255 255 / 0.8);
+    box-shadow: var(--shadow-float);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+
+  .action-bar .btn {
+    flex: 1;
+    min-height: 48px;
+    padding: 0 14px;
+    font-size: 0.9375rem;
+  }
+
+  .action-bar .btn-secondary {
+    background: #fff;
+  }
+
+  html.menu-open .action-bar {
+    display: none;
+  }
+}
+
+/* Slide in once the visitor scrolls past the hero's own call buttons. */
+@keyframes action-bar-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    translate: 0 140%;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@media (max-width: 734px) and (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    .action-bar {
+      animation: action-bar-in linear both;
+      animation-timeline: scroll(root);
+      animation-range: 200px 420px;
+    }
+  }
+}

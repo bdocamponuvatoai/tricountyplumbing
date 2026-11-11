@@ -1,0 +1,78 @@
+/* Full-bleed photo band with copy on a scrim. */
+
+/* The next white section supplies the gap below, unless it's the dark CTA. */
+.local-section {
+  padding-bottom: 0;
+}
+
+.local-section:has(+ .cta) {
+  padding-bottom: var(--section-y);
+}
+
+.local {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(540px, 50vw, 680px);
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  color: var(--on-dark);
+  isolation: isolate;
+  --focus: #fff;
+}
+
+.local > .photo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  border-radius: 0;
+}
+
+.local::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(10 25 29 / 0.72) 0%,
+      rgb(10 25 29 / 0.2) 60%,
+      rgb(10 25 29 / 0) 100%
+    ),
+    linear-gradient(180deg, rgb(10 25 29 / 0) 45%, rgb(10 25 29 / 0.55) 100%);
+}
+
+.local-content {
+  max-width: 560px;
+  padding: clamp(28px, 5vw, 64px);
+}
+
+.local-content .eyebrow {
+  color: var(--accent-on-dark);
+}
+
+.local-content > p:not(.eyebrow) {
+  margin: 18px 0 28px;
+  color: rgb(255 255 255 / 0.86);
+  font-size: var(--fs-body-lg);
+}
+
+@media (max-width: 734px) {
+  .local {
+    min-height: 600px;
+  }
+
+  .local::after {
+    background: linear-gradient(
+      180deg,
+      rgb(10 25 29 / 0) 12%,
+      rgb(10 25 29 / 0.62) 42%,
+      rgb(10 25 29 / 0.92) 80%
+    );
+  }
+
+  .local .btn {
+    width: 100%;
+  }
+}

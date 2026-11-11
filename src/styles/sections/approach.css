@@ -1,0 +1,56 @@
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(40px, 6vw, 96px);
+  align-items: center;
+}
+
+.approach-photo img {
+  aspect-ratio: 1;
+}
+
+.approach-copy .body-lg {
+  margin-top: 24px;
+}
+
+/* Numbered steps */
+
+.steps {
+  margin: 32px 0;
+  border-top: 1px solid var(--line);
+}
+
+.steps li {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.steps .step-number {
+  padding-top: 2px;
+}
+
+.steps h3 {
+  font-size: var(--fs-body);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.steps p {
+  margin-top: 2px;
+  color: var(--text-2);
+  font-size: var(--fs-small);
+}
+
+@media (max-width: 834px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 734px) {
+  .approach-photo img {
+    aspect-ratio: 4 / 5;
+  }
+}
